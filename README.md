@@ -5,8 +5,8 @@
 This is a simple [Docker][docker] container for [Dat][dat]. It's pre-configured
 to run a Dat server, useful for simple inspection and HTTP access to your data.
 
-You can pull the container from the Docker Index or use it as a base for your
-own.
+You can pull the container from the [Docker Index][index] or use it as a base
+for your own.
 ```bash
 $ docker pull adlawson/dat
 ```
@@ -35,5 +35,6 @@ The content of this library is released under the **MIT License** by
 [dat]: http://dat-data.com
 
 <!-- Project -->
+[index]: https://registry.hub.docker.com/u/adlawson/dat/
 [license]: /LICENSE
 [screenshot]: screenshot.png
