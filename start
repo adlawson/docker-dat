@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+readonly DAT=".dat"
+
+set -eo pipefail
+cd $1
+
+if [ ! -d "$DAT" ]; then
+    dat init
+fi
+
+dat listen
