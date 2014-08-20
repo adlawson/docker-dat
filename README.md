@@ -18,9 +18,13 @@ will run `dat init`.
 ```bash
 $ docker run -d -v /path/to/repo:/data -p 6461:6461 --name=dat adlawson/dat
 $ curl localhost:6461/api
-# => {"dat":"Hello","version":"5.x","changes":0,"approximateSize":{"documents":"0 B"}}
+# => {"dat":"Hello","version":"6.x","changes":0,"rows":0,"approximateSize":{"rows":"0 B"}}
 $ curl -H 'Content-Type: application/json' -d '{"foo": "bar"}' localhost:6461/api/rows
-# => {"foo":"bar","key":"chy4xkcyw00000epkk6ttd315","version":1}
+# => {"foo":"bar","key":"chz2he34m00000fo6jhbsqemj","version":1}
+$ curl -H 'Content-Type: application/json' -d '{"foo": "baz"}' localhost:6461/api/rows
+# => {"foo":"baz","key":"chz2hfi3m00010fo6fnaz41wo","version":1}
+$ curl -H 'Content-Type: application/json' -d '{"foo": "bam"}' localhost:6461/api/rows
+# => {"foo":"bam","key":"chz2hfm7400020fo6g3i8o2sv","version":1}
 ```
 
 ![Dat Editor][screenshot]
@@ -36,5 +40,5 @@ The content of this library is released under the **MIT License** by
 
 <!-- Project -->
 [index]: https://registry.hub.docker.com/u/adlawson/dat/
-[license]: /LICENSE
+[license]: LICENSE
 [screenshot]: screenshot.png
