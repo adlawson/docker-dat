@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
 
 readonly DAT=".dat"
+readonly DIR="$1"
 
 set -eo pipefail
-cd $1
+cd "$DIR"
 
-if [ ! -d "$DAT" ]; then
-    dat init
-fi
+[[ ! -d "$DAT" ]] && dat init
 
 dat listen
