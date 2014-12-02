@@ -11,4 +11,4 @@ ENTRYPOINT ["/bin/start", "/data"]
 CMD []
 
 EXPOSE 6461
-RUN npm install -g dat@6
+RUN npm install -g dat@6.8
